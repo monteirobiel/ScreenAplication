@@ -1,5 +1,6 @@
 package br.com.monteirodev.ScreenAplication;
 
+import br.com.monteirodev.ScreenAplication.Model.EpisodeData;
 import br.com.monteirodev.ScreenAplication.Model.SeriesData;
 import br.com.monteirodev.ScreenAplication.Service.ConsumptionAPI;
 import br.com.monteirodev.ScreenAplication.Service.DataConvert;
@@ -15,8 +16,6 @@ public class ScreenAplicationApplication implements CommandLineRunner {
 
 	}
 
-
-
 	@Override
 	public void run(String... args) throws Exception {
 		var  consumptionAPI = new ConsumptionAPI();
@@ -25,5 +24,9 @@ public class ScreenAplicationApplication implements CommandLineRunner {
 		DataConvert convert = new DataConvert();
 		SeriesData data = convert.getData (json, SeriesData.class);
 		System.out.println(data);
+
+		consumptionAPI.getData("https://www.omdbapi.com/?t=gilmore+girls&season=1&episode=2&apikey=9b4ee23");
+		EpisodeData episodeData = convert.getData (json, EpisodeData.class);
+		System.out.println(episodeData);
 	}
 }
