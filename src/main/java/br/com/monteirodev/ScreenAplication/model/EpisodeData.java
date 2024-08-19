@@ -1,4 +1,4 @@
-package br.com.monteirodev.ScreenAplication.Model;
+package br.com.monteirodev.ScreenAplication.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

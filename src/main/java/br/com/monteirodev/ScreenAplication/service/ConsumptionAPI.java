@@ -1,4 +1,4 @@
-package br.com.monteirodev.ScreenAplication.Service;
+package br.com.monteirodev.ScreenAplication.service;
 
 import java.io.IOException;
 import java.net.URI;
